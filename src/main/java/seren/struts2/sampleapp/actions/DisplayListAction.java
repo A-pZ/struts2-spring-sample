@@ -28,12 +28,12 @@ import seren.struts2.sampleapp.service.ProductService;
 public class DisplayListAction extends ActionSupport {
 
 	@Action("list")
-    public String execute() throws Exception {
+	public String execute() throws Exception {
 		products = service.search();
 		log.info("- search:{}" , products);
 
-        return SUCCESS;
-    }
+		return SUCCESS;
+	}
 
 	@Autowired
 	ProductService service;
